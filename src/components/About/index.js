@@ -11,6 +11,8 @@ const About = () => {
     setIsVisible(entry.isIntersecting);
   }
   useEffect(() => {
+    let observerRefValue = null; // <-- variable to hold ref value
+
     let options = {
       root: null,
       rootMargin: '0px',
@@ -20,11 +22,13 @@ const About = () => {
     if(!isVisible){
       if(imgRef.current){
         observer.observe(imgRef.current)
+        observerRefValue = imgRef.current; // <-- save ref value
+
       }
     }
     return () => {
-      if(imgRef.current){
-        observer.unobserve(imgRef.current)
+      if(observerRefValue) {  
+        observer.unobserve(observerRefValue)
       }
     }
   },[isVisible]);
