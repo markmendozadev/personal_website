@@ -1,7 +1,35 @@
+import { useEffect,useRef,useState } from 'react'
 import './about.css'
 import '../../App.css'
 import logo from '../../assets/markmendoza.jpg'
 const About = () => {
+  const [isVisible,setIsVisible] = useState(false);
+  const imgRef = useRef(null)
+
+  const callbackFn = (entries) => {
+    const [ entry ] = entries;
+    setIsVisible(entry.isIntersecting);
+  }
+  useEffect(() => {
+    let options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 1.0
+    }
+    let observer = new IntersectionObserver(callbackFn, options);
+    if(!isVisible){
+      if(imgRef.current){
+        observer.observe(imgRef.current)
+      }
+    }
+    return () => {
+      if(imgRef.current){
+        observer.unobserve(imgRef.current)
+      }
+    }
+  },[isVisible]);
+
+  console.log(isVisible);
   return (
     <div className='about__container' id='about'>
       <div className='row'>
@@ -21,7 +49,7 @@ const About = () => {
           </ul>
         </div>
         <div className='col-lg-4'>
-          <img src={logo} alt='profile_img' width='90%' height='90%' className='profile_img'/>
+          <img src={logo} alt='profile_img' width='90%' height='90%' className={`profile_img ${isVisible ? 'rotate_img' : ''}`} ref={imgRef}/>
         </div>
       </div>
     </div>

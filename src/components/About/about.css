@@ -43,8 +43,20 @@
 .profile_img {
   display: block;
   margin-left: auto;
-  transform: rotate(-2.87deg);
   margin-right: auto;
+  transform: rotate(-2.87deg);
+}
+.rotate_img {
+  animation: spin 1500ms ease-out 0s;
+}
+@keyframes spin { 
+  0% { 
+      transform:rotate(360deg); 
+  }
+  100% {
+    transform: rotate(-2.87deg);
+  }
+
 }
 
 .tech-list {
