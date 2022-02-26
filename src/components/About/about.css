@@ -1,0 +1,60 @@
+.about__container {
+  margin-top: 2rem;
+  height: calc(100vh - 230px);
+}
+
+.col-lg-8 {
+  flex: 0 60%
+}
+.col-lg-4 {
+  flex: 0 40%
+}
+
+@media only screen and (max-width: 768px) {
+  .col-lg-8 {
+    flex: 100%
+  }
+  .col-lg-4 {
+    flex: 100%
+  }
+}
+
+.col-lg-8 > h2 {
+  font-size: 3rem;
+  color: #FFD60A;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.col-lg-8 > h2:after{
+  content:'';
+  flex: 1 1;
+  border-bottom: 1px solid #FFD60A;
+  margin: auto 2rem auto 1rem;
+
+}
+
+.col-lg-8 > p {
+  font-size: 1.5rem;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.profile_img {
+  display: block;
+  margin-left: auto;
+  transform: rotate(-2.87deg);
+  margin-right: auto;
+}
+
+.tech-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 7rem;
+}
+
+.tech-list li {
+  list-style: disc;
+  max-width: 50%;
+}

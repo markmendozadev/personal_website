@@ -1,0 +1,26 @@
+.main__text {
+  text-align: center;
+  font-size: 4.5rem;
+  font-family: 'IBM Plex Sans', sans-serif!important;
+  margin-bottom: 0;
+}
+.sub__text {
+  margin-top: 0;
+  text-align: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 1.125rem;
+  color: #FFD60A;
+}
+
+.project__grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  padding: 2rem;
+  grid-gap: 2rem;
+}
+
+.project__grid > div {
+  height: 300px;
+  padding: 1rem;
+  background: #001D3D;
+}

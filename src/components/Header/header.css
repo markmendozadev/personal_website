@@ -1,0 +1,40 @@
+.header__container {
+  height: calc(100vh - 100px); 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.header__container > header {
+  text-align: center;
+}
+
+header > h1 {
+  font-size: 6rem;
+  margin: 0;
+}
+header>p {
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+header>.Typewriter{
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.hire__button {
+  margin-top: 2rem;
+  background-color: #FFD60A;
+  color: #000;
+  padding: 1rem 8rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  border: none;
+}
+.social_icons > svg {
+  margin: 1rem 1.5rem;
+}
