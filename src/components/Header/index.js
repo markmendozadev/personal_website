@@ -1,7 +1,7 @@
 import './header.css'
 import { Button } from '..';
 import Typewriter from 'typewriter-effect';
-import { FaGithub, FaLinkedin, FaEnvelope} from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaBehanceSquare} from 'react-icons/fa'
 const Header = () => {
   return (
     <div className='header__container' id='header'>
@@ -30,7 +30,7 @@ const Header = () => {
       <div className='social_icons'>
         <FaLinkedin size={42} />
         <FaGithub size={42} />
-        <FaEnvelope size={42} />
+        <FaBehanceSquare size={42} />
       </div>
       <Button className="hire__button">Hire Me</Button>
     </header>

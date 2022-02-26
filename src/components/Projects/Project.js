@@ -1,8 +1,10 @@
-import React from 'react'
+import image from '../../assets/markmendoza.jpg'
 
 const Project = () => {
   return (
-    <div></div>
+    <div>
+      <img src={image} width="100%" height="100%" alt='project' />
+    </div>
   )
 }
 

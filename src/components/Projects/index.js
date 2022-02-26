@@ -5,7 +5,7 @@ const Projects = () => {
   return (
     <div className='container' id='projects'>
       <h2 className='main__text'>PROJECTS</h2>
-      <p className='sub__text'>view all projects</p>
+      <p className='sub__text'><a href="https://github.com/markmendozadev?tab=repositories" target='_blank' rel='noreferrer'>view all projects</a></p>
       <div className='project__grid'>
         <Project />
         <Project />

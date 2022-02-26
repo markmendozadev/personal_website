@@ -27,13 +27,8 @@ header>.Typewriter{
 
 .hire__button {
   margin-top: 2rem;
-  background-color: #FFD60A;
-  color: #000;
   padding: 1rem 8rem;
-  font-weight: bold;
   font-size: 1.5rem;
-  border-radius: 5px;
-  border: none;
 }
 .social_icons > svg {
   margin: 1rem 1.5rem;

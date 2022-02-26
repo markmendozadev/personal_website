@@ -1,8 +1,7 @@
-import React from 'react'
-
+import './button.css'
 const Button = (props) => {
   return (
-    <button {...props}>{props.children}</button>
+    <button {...props} className={`${props.className} btn__yellow`}>{props.children}</button>
   )
 }
 
