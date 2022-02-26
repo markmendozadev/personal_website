@@ -3,7 +3,7 @@ import './projects.css'
 import Project from './Project'
 const Projects = () => {
   return (
-    <div className='container' id='projects'>
+    <div id='projects'>
       <h2 className='main__text'>PROJECTS</h2>
       <p className='sub__text'><a href="https://github.com/markmendozadev?tab=repositories" target='_blank' rel='noreferrer'>view all projects</a></p>
       <div className='project__grid'>

@@ -3,7 +3,7 @@ import '../../App.css'
 import logo from '../../assets/markmendoza.jpg'
 const About = () => {
   return (
-    <div className='container about__container' id='about'>
+    <div className='about__container' id='about'>
       <div className='row'>
         <div className='col-lg-8'>
           <h2>About Me</h2>
