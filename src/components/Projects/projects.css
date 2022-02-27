@@ -4,7 +4,6 @@
 }
 .projects {
   opacity: 0;
-  animation: adjustOpacity 2000ms linear;
 
 }
 @keyframes adjustOpacity {
@@ -20,6 +19,8 @@
   }
 }
 .projects__anim {
+  animation: adjustOpacity 1500ms linear;
+
   opacity: 1;
 }
 .main__text {
