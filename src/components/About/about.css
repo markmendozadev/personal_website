@@ -62,12 +62,10 @@
   opacity: 1;
   will-change: opacity, transform;
   object-fit: scale-down;
-  filter: invert(7%) sepia(50%) saturate(200%) hue-rotate(757deg) brightness(99%) contrast(107%);
 
 
 }
 .profile_img:hover{
-  filter:  invert(0%);
   transform: rotate(0deg);
   transform: scale(1.1);
 }
