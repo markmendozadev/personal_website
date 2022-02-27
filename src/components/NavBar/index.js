@@ -12,15 +12,12 @@ const NavBar = () => {
     if(visivility === "false"){
       nav.setAttribute("data-visible", "true");
       setIsOpen(() => true);
-
     } else {
       nav.setAttribute("data-visible", "false");
       setIsOpen(() => false);
-
     }
   }
 
-  console.log(isOpen);
   return (
         <div className="navigation__container">
           <div>

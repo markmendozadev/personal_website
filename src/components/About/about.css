@@ -83,7 +83,9 @@
   flex-direction: column;
   flex-wrap: wrap;
   height: 7rem;
-  padding: 1.5rem;
+  font-size: 1.5rem;
+  padding: 0 2rem;
+  margin-top: 0.5rem;
 }
 
 .tech-list li {

@@ -1,5 +1,26 @@
 #projects {
   margin-bottom: 5rem;
+
+}
+.projects {
+  opacity: 0;
+  animation: adjustOpacity 2000ms linear;
+
+}
+@keyframes adjustOpacity {
+  0% {
+    opacity: 0;
+  transform: scale(0.5);
+
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+
+  }
+}
+.projects__anim {
+  opacity: 1;
 }
 .main__text {
   text-align: center;
