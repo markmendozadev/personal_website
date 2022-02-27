@@ -9,17 +9,18 @@
 @keyframes adjustOpacity {
   0% {
     opacity: 0;
-  transform: scale(0.2);
+    transform: scale(0.2) rotate(0deg);
+    
 
   }
   100% {
     opacity: 1;
-    transform: scale(1);
+    transform: scale(1) rotate(360deg);
 
   }
 }
 .projects__anim {
-  animation: adjustOpacity 1500ms linear;
+  animation: adjustOpacity 1000ms linear;
 
   opacity: 1;
 }
@@ -42,7 +43,7 @@
 
 .project__grid {
   display: grid;
-  grid-template-columns: auto auto;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   padding: 2rem;
   grid-gap: 2rem;
 }

@@ -19,7 +19,7 @@ header>p {
   margin: 0;
 }
 
-header>.Typewriter {
+header>.typewriter__container >.Typewriter {
   font-size: clamp(2rem,5vw,3rem);
   font-weight: 600;
   margin-bottom: 1rem;
@@ -30,6 +30,14 @@ header>.Typewriter {
   padding: 1rem 8rem;
   font-size: 1.5rem;
 }
-.social_icons > svg {
+.social_icons > a {
   margin: 1rem 1.5rem;
+  color: #fff;
+}
+.header__container p, .header__container h1, .header__container .social_icons, .header__container .hire__button, .header__container .typewriter__container {
+  opacity: 0;
+  transition:  opacity 1s ease-in; 
+}
+.header__container__anim {
+  opacity: 1!important;
 }

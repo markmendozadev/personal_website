@@ -1,21 +1,13 @@
 .about__container {
   margin-top: 2rem;
   height: calc(100vh - 230px);
+}
+.about__container .row .col-lg-8 > h2, .about__container p, .about__container ul, .about__container img {
   opacity: 0;
+  transition:  opacity 1s ease-in; 
 }
 .about__container__anim {
-  animation: fadeInX 0.5s linear 0s;
   opacity: 1!important;
-}
-@keyframes fadeInX {
-  0% {
-    opacity: 0;
-    transform: translateX(-500px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0px);
-  }
 }
 .col-lg-8 {
   flex: 0 60%
@@ -24,7 +16,7 @@
   flex: 0 40%
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 48rem) {
   .col-lg-8 {
     flex: 100%
   }
@@ -34,11 +26,11 @@
 }
 
 .col-lg-8 > h2 {
-  font-size: 3rem;
+  font-size: clamp(2.5rem, 5vw,3rem);
   color: #FFD60A;
   display: flex;
   flex-direction: row;
-
+  text-transform: uppercase;
 }
 
 .col-lg-8 > h2:after{
@@ -46,9 +38,28 @@
   flex: 1 1;
   border-bottom: 1px solid #FFD60A;
   margin: auto 2rem auto 1rem;
-
 }
-
+@media only screen and (max-width: 48rem) {
+  .about__container {
+    height: 100%;
+  }
+  .col-lg-8 > h2:after, .col-lg-8 > h2:before {
+    content:''!important;
+    flex: 1 1!important;
+    border-bottom: 1px solid #FFD60A!important;
+    margin: auto 1rem!important;
+  }
+  .col-lg-8 > p {
+    text-align: left;
+    margin: auto 1rem;
+  }
+  .col-lg-8 > p:first-of-type {
+    margin-bottom: 1rem;
+  }
+  .tech-list {
+    margin: auto 1rem;
+  }
+}
 .col-lg-8 > p {
   font-size: 1.5rem;
   font-family: 'JetBrains Mono', monospace;

@@ -14,7 +14,7 @@ const useObserver = () => {
     let options = {
       root: null,
       rootMargin: '0px',
-      threshold: 1.0
+      threshold: 0.25
     }
     let observer = new IntersectionObserver(callbackFn, options);
     if(!isVisible){
