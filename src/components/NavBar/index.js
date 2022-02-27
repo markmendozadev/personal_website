@@ -1,5 +1,5 @@
 import { Link } from "react-scroll";
-import { FaBars,FaClose } from 'react-icons/fa'
+import { FaBars } from 'react-icons/fa'
 import { Button } from '..'
 import './navbar.css'
 import { useState, useRef } from "react";
