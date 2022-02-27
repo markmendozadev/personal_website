@@ -15,6 +15,8 @@ const NavBar = () => {
           </ul>
         </div>
       </nav>
+
+  
   )
 }
 

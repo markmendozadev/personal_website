@@ -44,7 +44,3 @@ ul li .resumeButton {
   width: 160px;
   font-family: 'IBM Plex Sans', sans-serif!important;
 }
-.active {
-  text-decoration: underline!important;
-  color: #FFD60A!important;
-}

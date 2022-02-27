@@ -35,7 +35,7 @@ const About = () => {
 
   console.log(isVisible);
   return (
-    <div className='about__container' id='about'>
+    <div className={`about__container ${isVisible ? 'about__container__anim' : ''}`} id='about'>
       <div className='row'>
         <div className='col-lg-8'>
           <h2>About Me</h2>
@@ -43,7 +43,7 @@ const About = () => {
           Hi! My name is Mark and i enjoy coding on a daily basis. My interest towards web development started a few years ago when i was in college when i created my first web app. 
           </p>
           <p>Here are few technologies i’ve been working recently:</p>
-          <ul className='tech-list'>
+          <ul className={`tech-list ${isVisible ? 'li_animated' : ''}`}>
             <li>Javascript</li>
             <li>ReactJS</li>
             <li>NodeJS</li>
