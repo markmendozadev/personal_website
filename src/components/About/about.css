@@ -4,7 +4,7 @@
   opacity: 0;
 }
 .about__container__anim {
-  animation: fadeInX 0.3s linear 0s;
+  animation: fadeInX 0.5s linear 0s;
   opacity: 1!important;
 }
 @keyframes fadeInX {

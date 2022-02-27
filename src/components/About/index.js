@@ -33,7 +33,6 @@ const About = () => {
     }
   },[isVisible]);
 
-  console.log(isVisible);
   return (
     <div className={`about__container ${isVisible ? 'about__container__anim' : ''}`} id='about'>
       <div className='row'>

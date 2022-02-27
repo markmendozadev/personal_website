@@ -1,46 +1,89 @@
 
-nav {
+.navigation__container {
   height: 100px;
   color: #fff;
   box-shadow: 0 1px #010d20;
   position: sticky;
   top: 0;
   z-index: 99999;
-}
-nav div {
-  margin: 0 5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin: auto 5rem;
+
 }
 
-nav h2 {
+.navigation__container h2 {
   font-size: 2.25rem;
   font-weight: 400;
   cursor: pointer;
 }
+.mobile-nav-toggle {
+ display: none;
+}
 
-ul {
+.primary-navigation {
   display: flex;
   flex-wrap: wrap;
 }
 
-ul li {
+.primary-navigation li {
   margin: auto 1.5rem;
   list-style: none;
   font-size: 1.5rem;
   font-weight: 400;
 }
-ul li a {
+.primary-navigation a {
   color: #fff;
   text-decoration: none;
   cursor: pointer;
 }
 
-ul li .resumeButton {
+.primary-navigation li .resumeButton {
   font-size: 1.5rem;
   color: #000;
   height: 40px;
   width: 160px;
   font-family: 'IBM Plex Sans', sans-serif!important;
+}
+
+@media (max-width: 69rem) {
+  .primary-navigation{
+    position: fixed;
+    background: #010d20;
+    flex-direction: column;
+    inset: 100px 0 20% 0;
+    text-align: center;
+    backdrop-filter: blur(1rem);
+    padding: min(30vh, 5rem) 2rem;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 200ms ease-out;
+  }
+
+  .primary-navigation li {
+    margin: 2rem;
+  }
+  .primary-navigation[data-visible="true"] {
+    opacity: 1;
+  }
+  .navigation__container {
+    margin: auto;
+    padding: 0 1rem;
+    background: #010d20;
+
+  }  
+
+  .mobile-nav-toggle {
+    position: absolute;
+    display: block;
+    width: 2rem;
+    aspect-ratio: 1;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    border: 0;
+    color: #fff;
+    background: none;
+  }
 }
