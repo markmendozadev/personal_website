@@ -18,3 +18,11 @@
   padding: 1rem 8rem;
   font-size: 1.5rem;
 }
+
+#contact h2, #contact p, #contact button {
+  opacity: 0;
+  transition:  opacity 1s ease-in; 
+}
+#contact>.contact__anim {
+  opacity: 1!important;
+}
