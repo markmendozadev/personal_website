@@ -1,5 +1,4 @@
 import './header.css'
-import { Button } from '..';
 import Typewriter from 'typewriter-effect';
 import { FaGithub, FaLinkedin, FaBehanceSquare} from 'react-icons/fa'
 import useObserver from '../Hooks';
@@ -36,7 +35,8 @@ const Header = () => {
           <a href="https://github.com/markmendozadev" target="_blank" rel="noreferrer"><FaGithub size={42} /></a>
           <a href="https://www.behance.net/markmendoza-dev" target="_blank" rel="noreferrer"><FaBehanceSquare size={42} /></a>
         </div>
-        <Button className={`hire__button ${isVisible ? 'header__container__anim' : ''}`} style={{transitionDelay: "800ms"}} >Hire Me</Button>
+        <a href="mailto:markmendozadev@gmail.com" className={`hire__button ${isVisible ? 'header__container__anim' : ''}`} style={{transitionDelay: "800ms"}} >Hire Me</a>
+
       </header>
     </div>
   )

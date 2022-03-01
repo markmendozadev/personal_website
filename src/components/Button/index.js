@@ -1,7 +1,7 @@
 import './button.css'
 const Button = (props) => {
   return (
-    <button {...props} className={`${props.className} btn__yellow`}>{props.children}</button>
+    <a {...props} className={`${props.className} btn__yellow`}>{props.children}</a>
   )
 }
 

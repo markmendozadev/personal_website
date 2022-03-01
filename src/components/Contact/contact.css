@@ -17,9 +17,17 @@
   margin-top: 1rem;
   padding: 1rem 8rem;
   font-size: 1.5rem;
+    background-color: #FFD60A;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    
 }
 
-#contact h2, #contact p, #contact button {
+#contact h2, #contact p, #contact a {
   opacity: 0;
   transition:  opacity 1s ease-in; 
 }

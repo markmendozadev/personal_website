@@ -39,7 +39,7 @@ const NavBar = () => {
                 <li><Link activeClass="active" to="about" spy={true} smooth={true} offset={-200} duration={50}>ABOUT ME</Link></li>
                 <li><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-150} duration={50}>PROJECTS</Link></li>
                 <li><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={50}>CONTACT</Link></li>
-                <li><Button className='resumeButton'>RESUME</Button></li>
+                <li><Button className='resumeButton' href="https://drive.google.com/file/d/1KO2QT02bKbRq9LWsRGdTPIcxsXaw8xiC/view?usp=sharing" target="_blank">RESUME</Button></li>
               </ul>            
             </nav>
 
