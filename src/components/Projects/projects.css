@@ -39,3 +39,10 @@
   padding: 1rem;
   background: #001D3D;
 }
+
+@media only screen and (max-width: 400px) {
+  .project__grid {
+    grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+  }
+
+}
