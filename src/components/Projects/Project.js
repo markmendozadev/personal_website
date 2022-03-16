@@ -1,4 +1,3 @@
-import image from "../../assets/markmendoza.jpg";
 import Button from "../Button";
 const Project = (props) => {
   const { data } = props;

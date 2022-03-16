@@ -1,16 +1,34 @@
 import { Link } from "react-scroll";
-import { FaBars } from 'react-icons/fa'
-import { Button } from '..'
-import './navbar.css'
-import { useState, useRef } from "react";
+import { FaBars } from "react-icons/fa";
+import { Button } from "..";
+import "./navbar.css";
+import { useState, useRef, useEffect } from "react";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const navRef = useRef(false)
+  const navRef = useRef(false);
+  const [show, setShow] = useState(true);
+  let lastScrollTop = 0;
+  const controlNavbar = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    if (scrollTop > lastScrollTop) {
+      setShow(false);
+    } else {
+      setShow(true);
+    }
+    lastScrollTop = scrollTop;
+  };
+  useEffect(() => {
+    window.addEventListener("scroll", controlNavbar);
+    return () => {
+      window.removeEventListener("scroll", controlNavbar);
+    };
+  }, []);
+
   const toggleHandler = (e) => {
     const nav = navRef.current;
     let button = e.currentTarget;
     const visivility = nav.getAttribute("data-visible");
-    if(visivility === "false"){
+    if (visivility === "false") {
       nav.setAttribute("data-visible", "true");
       button.setAttribute("aria-expanded", "true");
       setIsOpen(() => true);
@@ -19,34 +37,86 @@ const NavBar = () => {
       button.setAttribute("aria-expanded", "false");
       setIsOpen(() => false);
     }
-
-  }
+  };
   const closeBgHandler = () => {
     setIsOpen(() => false);
     navRef.current.setAttribute("data-visible", "false");
-
-  }
+  };
 
   return (
-          <div className="navigation__container">
-            <div>
-              <h2><Link to="header" smooth={true} offset={-100} duration={50}>Mark Mendoza</Link></h2>
-            </div>
-            <button className='mobile-nav-toggle' onClick={toggleHandler} aria-expanded="false" aria-controls="primary-navigation" >{!isOpen ? <FaBars size={30} /> : 'X'}</button>
-            {isOpen && <div className="nav__overlay" onClick={closeBgHandler}></div> }
-            <nav>         
-              <ul className='primary-navigation' id='primary-navigation' data-visible='false' ref={navRef}>
-                <li><Link activeClass="active" to="about" spy={true} smooth={true} offset={-200} duration={50}>ABOUT ME</Link></li>
-                <li><Link activeClass="active" to="projects" spy={true} smooth={true} offset={-150} duration={50}>PROJECTS</Link></li>
-                <li><Link activeClass="active" to="contact" spy={true} smooth={true} offset={-100} duration={50}>CONTACT</Link></li>
-                <li><Button className='resumeButton' href="https://drive.google.com/file/d/1KO2QT02bKbRq9LWsRGdTPIcxsXaw8xiC/view?usp=sharing" target="_blank">RESUME</Button></li>
-              </ul>            
-            </nav>
+    <div className={`navigation__container ${!show && "navbar--hidden"}`}>
+      <div>
+        <h2>
+          <Link to="header" smooth={true} offset={-100} duration={50}>
+            Mark Mendoza
+          </Link>
+        </h2>
+      </div>
+      <button
+        className="mobile-nav-toggle"
+        onClick={toggleHandler}
+        aria-expanded="false"
+        aria-controls="primary-navigation"
+      >
+        {!isOpen ? <FaBars size={30} /> : "X"}
+      </button>
+      {isOpen && <div className="nav__overlay" onClick={closeBgHandler}></div>}
+      <nav>
+        <ul
+          className="primary-navigation"
+          id="primary-navigation"
+          data-visible="false"
+          ref={navRef}
+        >
+          <li>
+            <Link
+              activeClass="active"
+              to="about"
+              spy={true}
+              smooth={true}
+              offset={-200}
+              duration={50}
+            >
+              ABOUT ME
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="projects"
+              spy={true}
+              smooth={true}
+              offset={-150}
+              duration={50}
+            >
+              PROJECTS
+            </Link>
+          </li>
+          <li>
+            <Link
+              activeClass="active"
+              to="contact"
+              spy={true}
+              smooth={true}
+              offset={-100}
+              duration={50}
+            >
+              CONTACT
+            </Link>
+          </li>
+          <li>
+            <Button
+              className="resumeButton"
+              href="https://drive.google.com/file/d/1KO2QT02bKbRq9LWsRGdTPIcxsXaw8xiC/view?usp=sharing"
+              target="_blank"
+            >
+              RESUME
+            </Button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  );
+};
 
-          </div>
-
-  
-  )
-}
-
-export default NavBar
+export default NavBar;
