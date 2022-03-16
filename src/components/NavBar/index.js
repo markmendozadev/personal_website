@@ -2,27 +2,27 @@ import { Link } from "react-scroll";
 import { FaBars } from "react-icons/fa";
 import { Button } from "..";
 import "./navbar.css";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const navRef = useRef(false);
   const [show, setShow] = useState(true);
-  let lastScrollTop = 0;
-  const controlNavbar = () => {
+  const [lastScrollTop, setLastSCrollTop] = useState(0);
+  const controlNavbar = useCallback(() => {
     const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
     if (scrollTop > lastScrollTop) {
       setShow(false);
     } else {
       setShow(true);
     }
-    lastScrollTop = scrollTop;
-  };
+    setLastSCrollTop(scrollTop);
+  }, [lastScrollTop]);
   useEffect(() => {
     window.addEventListener("scroll", controlNavbar);
     return () => {
       window.removeEventListener("scroll", controlNavbar);
     };
-  }, []);
+  }, [controlNavbar]);
 
   const toggleHandler = (e) => {
     const nav = navRef.current;

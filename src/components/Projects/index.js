@@ -23,7 +23,7 @@ const data = [
     delay: "400ms",
   },
   {
-    id: 2,
+    id: 3,
     title: "Crypto coins information Web App",
     img: cryptoGuy,
     url: "https://cryptoguy.netlify.app/",
