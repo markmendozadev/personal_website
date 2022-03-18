@@ -115,7 +115,6 @@
 @media only screen and (max-width: 400px) {
   .tech-list {
     height: 100%;
-    width: 100%;
   }
   img {
     margin-top: 1rem;
