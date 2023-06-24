@@ -107,7 +107,7 @@ const NavBar = () => {
           <li>
             <Button
               className="resumeButton"
-              href="https://drive.google.com/file/d/1nCrXdonEqbavXAeNbiqbHA2Ma2HP6p-W/view?usp=sharing"
+              href="https://drive.google.com/file/d/1a6VwsdGmvFaSoFF3nYStiGzEXi2Yj4Kr/view?usp=sharing"
               target="_blank"
             >
               RESUME
